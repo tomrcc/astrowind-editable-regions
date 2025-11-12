@@ -16,6 +16,9 @@ const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+
+const {frontmatter } = Astro.props;
+console.log(frontmatter)
 ---
 
 <Layout metadata={metadata}>
@@ -35,8 +38,10 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      <editable-source data-path="src/layouts/HomeLayout.astro" data-key="title">
+        Free template for <span class="hidden xl:inline">creating websites with</span>
+        <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      </editable-source>
     </Fragment>
 
     <Fragment slot="subtitle">

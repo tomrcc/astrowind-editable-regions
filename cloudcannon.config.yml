@@ -59,3 +59,36 @@ markdown:
     superscript: false
     heading_ids: false
     attributes: false
+
+_snippets:
+  anchor:
+    snippet: <a [[args]]>[[inner]]</a>
+    params:
+      args:
+        parser: key_values
+        options:
+          models:
+            - editor_key: href
+          format:
+            string_boundary:
+              - '"'
+            root_value_delimiter: '='
+      inner:
+        parser: content
+        options:
+          editor_key: text
+  span:
+    snippet: <span class="[[classes]]">[[inner]]</span>
+    params:
+      classes:
+        parser: argument
+        options:
+          model:
+            editor_key: classes
+          format:
+            string_boundary:
+              - '"'
+      inner:
+        parser: content
+        options:
+          editor_key: text

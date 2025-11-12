@@ -1,36 +1,41 @@
 paths:
   uploads: src/assets/images
   static: ''
-
 collections_config:
   homes:
     path: src/pages/homes
-    url: /homes/[slug]
     icon: home
+    url: /homes/[slug]
+    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
   landing:
     path: src/pages/landing
-    url: /landing/[slug]
     icon: padding
+    url: /landing/[slug]
+    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
   pages:
     path: src/pages
-    url: /[full_slug]
-    glob: 
+    glob:
       - '*.astro'
       - '*.md'
     icon: fit_page
+    url: /[full_slug]
+    disable_url: false
+    _enabled_editors:
+      - visual
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
   posts:
     path: src/data/post
-    url: /[slug]
     icon: newspaper
+    url: /[slug]
+    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false

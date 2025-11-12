@@ -78,7 +78,7 @@ _snippets:
         options:
           editor_key: text
   span:
-    snippet: <span class="[[classes]]">[[inner]]</span>
+    snippet: <span class=[[classes]]>[[inner]]</span>
     params:
       classes:
         parser: argument

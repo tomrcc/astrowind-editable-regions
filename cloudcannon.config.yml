@@ -7,7 +7,6 @@ collections_config:
     path: src/pages/homes
     url: /homes/[slug]
     icon: home
-    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -15,7 +14,6 @@ collections_config:
     path: src/pages/landing
     url: /landing/[slug]
     icon: padding
-    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -26,7 +24,6 @@ collections_config:
       - '*.astro'
       - '*.md'
     icon: fit_page
-    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -34,7 +31,6 @@ collections_config:
     path: src/data/post
     url: /[slug]
     icon: newspaper
-    disable_url: true
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false

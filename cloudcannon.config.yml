@@ -1,9 +1,11 @@
 paths:
-  uploads: public/uploads
-  static: public
+  uploads: src/assets/images
+  static: ''
+
 collections_config:
   homes:
     path: src/pages/homes
+    url: /homes/[slug]
     icon: home
     disable_url: false
     disable_add: false
@@ -11,21 +13,27 @@ collections_config:
     disable_file_actions: false
   landing:
     path: src/pages/landing
+    url: /landing/[slug]
     icon: padding
     disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  src_pages:
+  pages:
     path: src/pages
+    url: /[full_slug]
+    glob: 
+      - '*.astro'
+      - '*.md'
     icon: fit_page
     disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  src_data_post:
+  posts:
     path: src/data/post
-    icon: compost
+    url: /[slug]
+    icon: newspaper
     disable_url: true
     disable_add: false
     disable_add_folder: false
